@@ -13,7 +13,7 @@ export const apiCall = async (url, method) => {
     // Get the Harvest account id (6 digits) that was stored
     const accountId = alfy.config.get('accountId');
 
-    if (!accountId) throw new Error('Missing account id');
+    if (!accountId) throw new Error('Missing account id. Have you setup correctly?');
 
     const execute = async (command) => {
         const { stdout, stderr } = await exec(command);
@@ -31,11 +31,19 @@ export const apiCall = async (url, method) => {
     }
 
     // gets the Harvest API token from Apple's keychain
-    return execute(`security find-generic-password -a '${accountId}' -s 'com.andrejilderda.harvest' -w`)
+    const getToken = async (accountId) => {
+        return execute(`security find-generic-password -a '${accountId}' -s 'com.andrejilderda.harvest' -w`);
+    }
+
+    return getToken(accountId)
         .then(token => {
-            return fetchApi(token).then(result => {
-                return result;
-            });
+            return fetchApi(token)
+                .then(result => {
+                    return result;
+                });
+        })
+        .catch(error => {
+            throw new Error(error);
         });
 }
 
