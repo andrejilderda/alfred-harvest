@@ -1,4 +1,4 @@
-import { apiCall } from './utils.js';
+import { apiCall } from './utils/helpers';
 
 const vars = process.env;
 const { action, taskId, taskNotes, requestMethod, taskHours } = vars;
