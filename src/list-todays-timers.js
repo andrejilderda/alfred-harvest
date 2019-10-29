@@ -53,6 +53,21 @@ await apiCall(url, 'GET')
             return acc + entry.hours;
         }, 0);
 
+        if (!response.time_entries.length) {
+            items.push({
+                uid: 123456789,
+                title: `No timers yet today. Start one?`,
+                subtitle: `Press 'Enter' to select a new timer...`,
+                autocomplete: 'hnew',
+                valid: true,
+                icon: { path: 'src/icons/add.png' },
+                variables: {
+                    goTo: 'newTask'
+                }
+            });
+        }
+
+        // total time today
         items.push({
             uid: 123456789,
             title: `Total: ${totalTimeToday}`,

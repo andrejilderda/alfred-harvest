@@ -58,8 +58,33 @@
 				<false/>
 			</dict>
 		</array>
+		<key>4527DE0A-A0A1-4B8B-AECD-D59403110FAB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E86AC480-AA7B-448C-AD5F-955BFF35D819</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>A60C78B6-70F6-4D3A-91AB-E8AA1A4BC5A3</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4BD27885-AC87-4EF7-98CE-226F5763B797</key>
 		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>312BEE9D-8202-4A6A-94DB-4B0EDF21CBCF</string>
@@ -109,9 +134,29 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>66B87F74-D220-42E2-ACD4-34829FE9910B</key>
 		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>26507ACC-53B4-41B3-BB13-369E9526206D</string>
@@ -164,6 +209,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>E8BD4C0F-6FE1-4808-87EC-951DB65A6F0B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4527DE0A-A0A1-4B8B-AECD-D59403110FAB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -452,6 +510,59 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>hn</string>
+				<key>leftcursor</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.showalfred</string>
+			<key>uid</key>
+			<string>E86AC480-AA7B-448C-AD5F-955BFF35D819</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:goTo}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>newTask</string>
+						<key>outputlabel</key>
+						<string>new</string>
+						<key>uid</key>
+						<string>A60C78B6-70F6-4D3A-91AB-E8AA1A4BC5A3</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>bail</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>4527DE0A-A0A1-4B8B-AECD-D59403110FAB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -611,6 +722,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>subtext</key>
+				<string>{var:taskClientName}, {var:taskName} ({var:taskHours})</string>
+				<key>text</key>
+				<string>Add note: {var:taskNotes}{query}</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>312BEE9D-8202-4A6A-94DB-4B0EDF21CBCF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -660,25 +790,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>subtext</key>
-				<string>{var:taskClientName}, {var:taskName} ({var:taskHours})</string>
-				<key>text</key>
-				<string>Add note: {var:taskNotes}{query}</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>312BEE9D-8202-4A6A-94DB-4B0EDF21CBCF</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -694,46 +805,6 @@
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>DA7C946A-EDF1-4144-8039-F20AF8414652</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>hs</string>
-				<key>subtext</key>
-				<string>Use token: {query}</string>
-				<key>text</key>
-				<string>Enter token</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>BC08FC7F-F5A6-4644-8D5C-84A03EAEFD09</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>subtext</key>
-				<string>Use account id: {query}</string>
-				<key>text</key>
-				<string>Enter account id</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -759,6 +830,48 @@
 			<string>8081AC7B-0B05-4143-80E4-BAEB6ADDCBE7</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>hs</string>
+				<key>subtext</key>
+				<string>Use token: {query}</string>
+				<key>text</key>
+				<string>Enter Harvest API token...</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>BC08FC7F-F5A6-4644-8D5C-84A03EAEFD09</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Use account id: {query}</string>
+				<key>text</key>
+				<string>Enter Harvest account id...</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -813,6 +926,55 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>hl</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node src/launch-harvest.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Launch Harvest account in a browser</string>
+				<key>title</key>
+				<string>Launch: Visit Harvest account</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>227211EE-FA5C-4F14-AB24-7C4FB9416E54</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -823,7 +985,7 @@
 			<key>xpos</key>
 			<integer>890</integer>
 			<key>ypos</key>
-			<integer>965</integer>
+			<integer>1070</integer>
 		</dict>
 		<key>0A547B3A-0DAF-4A66-9143-70DF21977BF4</key>
 		<dict>
@@ -841,28 +1003,44 @@
 			<key>xpos</key>
 			<integer>705</integer>
 			<key>ypos</key>
-			<integer>545</integer>
+			<integer>650</integer>
+		</dict>
+		<key>227211EE-FA5C-4F14-AB24-7C4FB9416E54</key>
+		<dict>
+			<key>note</key>
+			<string>List today's timers</string>
+			<key>xpos</key>
+			<integer>135</integer>
+			<key>ypos</key>
+			<integer>1195</integer>
 		</dict>
 		<key>26507ACC-53B4-41B3-BB13-369E9526206D</key>
 		<dict>
 			<key>xpos</key>
 			<integer>415</integer>
 			<key>ypos</key>
-			<integer>545</integer>
+			<integer>650</integer>
 		</dict>
 		<key>312BEE9D-8202-4A6A-94DB-4B0EDF21CBCF</key>
 		<dict>
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>735</integer>
+			<integer>840</integer>
 		</dict>
 		<key>41298D53-42B4-434F-BBB6-0A5CA8ACE342</key>
 		<dict>
 			<key>xpos</key>
-			<integer>950</integer>
+			<integer>920</integer>
 			<key>ypos</key>
-			<integer>705</integer>
+			<integer>680</integer>
+		</dict>
+		<key>4527DE0A-A0A1-4B8B-AECD-D59403110FAB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>440</integer>
+			<key>ypos</key>
+			<integer>545</integer>
 		</dict>
 		<key>4BD27885-AC87-4EF7-98CE-226F5763B797</key>
 		<dict>
@@ -871,14 +1049,14 @@
 			<key>xpos</key>
 			<integer>135</integer>
 			<key>ypos</key>
-			<integer>735</integer>
+			<integer>840</integer>
 		</dict>
 		<key>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</key>
 		<dict>
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>935</integer>
+			<integer>1040</integer>
 		</dict>
 		<key>517AB5D6-54BC-4934-B4E7-FB64EB91E791</key>
 		<dict>
@@ -912,14 +1090,14 @@
 			<key>xpos</key>
 			<integer>135</integer>
 			<key>ypos</key>
-			<integer>545</integer>
+			<integer>650</integer>
 		</dict>
 		<key>8081AC7B-0B05-4143-80E4-BAEB6ADDCBE7</key>
 		<dict>
 			<key>xpos</key>
 			<integer>705</integer>
 			<key>ypos</key>
-			<integer>935</integer>
+			<integer>1040</integer>
 		</dict>
 		<key>8C54B474-C735-4821-AD9F-4A05DB67488A</key>
 		<dict>
@@ -930,7 +1108,7 @@
 			<key>xpos</key>
 			<integer>595</integer>
 			<key>ypos</key>
-			<integer>965</integer>
+			<integer>1070</integer>
 		</dict>
 		<key>A19C7560-4E10-4266-9C51-ED0FD18756CA</key>
 		<dict>
@@ -948,6 +1126,13 @@
 			<key>ypos</key>
 			<integer>380</integer>
 		</dict>
+		<key>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>330</integer>
+			<key>ypos</key>
+			<integer>555</integer>
+		</dict>
 		<key>BBE0C5A3-5BBE-4AD5-B1AB-74E31B243A6F</key>
 		<dict>
 			<key>note</key>
@@ -955,21 +1140,30 @@
 			<key>xpos</key>
 			<integer>705</integer>
 			<key>ypos</key>
-			<integer>735</integer>
+			<integer>840</integer>
 		</dict>
 		<key>BC08FC7F-F5A6-4644-8D5C-84A03EAEFD09</key>
 		<dict>
 			<key>xpos</key>
 			<integer>135</integer>
 			<key>ypos</key>
-			<integer>935</integer>
+			<integer>1040</integer>
 		</dict>
 		<key>DA7C946A-EDF1-4144-8039-F20AF8414652</key>
 		<dict>
 			<key>xpos</key>
 			<integer>910</integer>
 			<key>ypos</key>
-			<integer>855</integer>
+			<integer>960</integer>
+		</dict>
+		<key>E86AC480-AA7B-448C-AD5F-955BFF35D819</key>
+		<dict>
+			<key>note</key>
+			<string>Type 'hn'</string>
+			<key>xpos</key>
+			<integer>550</integer>
+			<key>ypos</key>
+			<integer>540</integer>
 		</dict>
 		<key>E8BD4C0F-6FE1-4808-87EC-951DB65A6F0B</key>
 		<dict>
@@ -987,9 +1181,9 @@
 			<key>note</key>
 			<string>Store token</string>
 			<key>xpos</key>
-			<integer>295</integer>
+			<integer>320</integer>
 			<key>ypos</key>
-			<integer>965</integer>
+			<integer>1070</integer>
 		</dict>
 	</dict>
 	<key>variablesdontexport</key>
