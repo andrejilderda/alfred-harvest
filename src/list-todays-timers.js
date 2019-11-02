@@ -1,3 +1,4 @@
+import { alfredError } from './utils/errors';
 import { apiCall } from './utils/helpers';
 import { getToday } from './utils/time';
 const alfy = require('alfy');
@@ -77,4 +78,7 @@ await apiCall(url, 'GET')
         });
 
         alfy.output(items);
+    })
+    .catch(error => {
+        alfredError(error, `Failed to list today's timers.`);
     });

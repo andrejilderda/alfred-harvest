@@ -1,3 +1,4 @@
+import { notify } from './utils/notifications';
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 const alfy = require('alfy');
@@ -22,4 +23,11 @@ execute(`security add-generic-password -a 'apitoken' -s 'com.andrejilderda.harve
     .then(token => {
         console.log(successMessage);
     }).catch(error => {
+        // show notice when there's already a key stored in the keychain
+        // (highly unlikely since we delete previous entries)
+        if (error.message.match(/already exists/)) {
+            notify('Remove the previously saved Harvest API token from the Keychain and try again.');
+            return;
+        }
+        notify(error.message);
     });

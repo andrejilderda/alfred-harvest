@@ -1,4 +1,5 @@
 import { apiCall } from './utils/helpers';
+import { notify } from './utils/notifications';
 
 const vars = process.env;
 const { action, taskId, taskNotes, requestMethod, taskHours } = vars;
@@ -16,4 +17,41 @@ if (action === 'adjust-timer') {
     url = `https://api.harvestapp.com/v2/time_entries/${taskId}?hours=${taskHours}`;
 }
 
-apiCall(url, requestMethod);
+await apiCall(url, requestMethod)
+    .then(response => {
+        if (action === 'note') {
+            notify(
+                'Harvest note updated!',
+                response.notes
+            );
+        }
+        else if (action === 'adjust-timer') {
+            notify(
+                'Harvest timer adjusted!',
+                `Hours: ${response.hours}`
+            );
+        }
+        else if (stopRestart === 'stop') {
+            notify(
+                'Harvest timer stopped!',
+                `${response.project.name}, ${response.task.name}`
+            );
+        }
+        else if (stopRestart === 'restart') {
+            notify(
+                'Harvest timer started!',
+                `${response.project.name}, ${response.task.name}`
+            );
+        }
+        else {
+            notify(
+                'Harvest timer updated!'
+            );
+        }
+    })
+    .catch(error => {
+        notify(
+            'Failed to update task.',
+            'Check your network connection and try again.'
+        );
+    });
