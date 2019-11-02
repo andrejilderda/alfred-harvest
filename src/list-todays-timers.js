@@ -1,6 +1,6 @@
 import { alfredError } from './utils/errors';
 import { apiCall } from './utils/helpers';
-import { getToday } from './utils/time';
+import { getToday, roundTime } from './utils/time';
 const alfy = require('alfy');
 
 const today = getToday();
@@ -28,7 +28,7 @@ await apiCall(url, 'GET')
                 };
 
                 return ({
-                    uid: element.id,
+                    uid: `${element.is_running ? '0' : 'element.id'}`,
                     title: `${actionPrefix}${element.project.name}`,
                     subtitle: `${element.client.name}, ${element.task.name} (${element.hours} hours${notes})`,
                     variables: {
@@ -70,9 +70,7 @@ await apiCall(url, 'GET')
 
         // total time today
         items.push({
-            uid: 123456789,
-            title: `Total: ${totalTimeToday}`,
-            subtitle: '',
+            title: `Total: ${roundTime(totalTimeToday)}`,
             valid: false,
             icon: { path: 'src/icons/add.png' }
         });
