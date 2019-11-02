@@ -32,7 +32,7 @@ export const apiCall = async (url, method) => {
 
     // gets the Harvest API token from Apple's keychain
     const getToken = async (accountId) => {
-        return execute(`security find-generic-password -a '${accountId}' -s 'com.andrejilderda.harvest' -w`);
+        return execute(`security find-generic-password -a 'apitoken' -s 'com.andrejilderda.harvest' -w`);
     }
 
     return getToken(accountId)

@@ -15,11 +15,11 @@ const execute = async (command) => {
 
 const successMessage = 'All set!';
 
-execute(`security add-generic-password -a '${accountId}' -s 'com.andrejilderda.harvest' -w '${token}'`)
+// delete previous API token the user might have saved before
+execute(`security delete-generic-password -a 'apitoken' -s 'com.andrejilderda.harvest'`);
+
+execute(`security add-generic-password -a 'apitoken' -s 'com.andrejilderda.harvest' -w '${token}'`)
     .then(token => {
         console.log(successMessage);
     }).catch(error => {
-        // if the key already exists in keychain, we're all good
-        if (error.message.match(/already exists/)) console.log(successMessage);
-        console.log(error.message);
     });
