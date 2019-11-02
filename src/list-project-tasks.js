@@ -1,29 +1,31 @@
+import { alfredError } from './utils/errors';
+import { apiCall } from './utils/helpers';
 const alfy = require('alfy');
 
 const vars = process.env;
 const { projectId } = vars;
 
 const url = `https://api.harvestapp.com/v2/projects/${projectId}/task_assignments`;
-let response = await alfy.fetch(url, {
-    headers: {
-        'Authorization': 'Bearer 1433922.pt.ryRJ-cf9mBB2WiPr8lJHLc8ONBsw848sTWQlfL6lmFLaUrBBjOYiQsyKZgIsgaXMF0osiwlYoyEqAyedsXKrmQ',
-        'Harvest-Account-ID': '853466'
-    }
-});
 
-const items = alfy
-    .inputMatches(response.task_assignments, 'task.name')
-    .map(element => ({
-        uid: element.id,
-        title: element.task.name,
-        subtitle: 'Start this task',
-        arg: element.task.id,
-        variables: {
-            taskId: element.task.id
-        },
-        icon: {
-            path: 'src/icons/go.png'
-        }
-    }));
+await apiCall(url, 'GET')
+    .then(response => {
+        const items = alfy
+            .inputMatches(response.task_assignments, 'task.name')
+            .map(element => ({
+                uid: element.id,
+                title: element.task.name,
+                subtitle: 'Start this task',
+                variables: {
+                    taskId: element.task.id,
+                    taskName: element.task.name
+                },
+                icon: {
+                    path: 'src/icons/go.png'
+                }
+            }));
 
-alfy.output(items);
+        alfy.output(items);
+    })
+    .catch(error => {
+        alfredError(error, 'Failed to list project tasks.');
+    });
