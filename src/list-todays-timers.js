@@ -27,8 +27,8 @@ await apiCall(url, 'GET')
                     requestMethod: 'PATCH'
                 };
 
-                return ({
-                    uid: `${element.is_running ? '0' : 'element.id'}`,
+                // setup main item
+                let item = {
                     title: `${actionPrefix}${element.project.name}`,
                     subtitle: `${element.client.name}, ${element.task.name} (${element.hours} hours${notes})`,
                     variables: {
@@ -37,18 +37,42 @@ await apiCall(url, 'GET')
                     icon: {
                         path: `${element.is_running ? 'src/icons/stop.png' : 'src/icons/start.png'}`
                     },
-                    mods: {
-                        alt: {
-                            subtitle: 'Delete this task...',
-                            variables: {
-                                taskId: element.id,
-                                requestMethod: 'DELETE'
-                            }
-                        }
+                    mods: {}
+                }
+
+                if (action === 'note') {
+                    item.icon = {
+                        path: `${element.is_running ? 'src/icons/note-active.png' : 'src/icons/note-inactive.png'}`
                     }
-                })
-            }
-            );
+                }
+
+                // use alt-key to delete task
+                if (action !== 'note') {
+                    item.mods.alt = {
+                        subtitle: 'Delete this task...',
+                        variables: {
+                            taskId: element.id,
+                            requestMethod: 'DELETE'
+                        },
+                        icon: {
+                            path: 'src/icons/remove.png'
+                        }
+                    };
+                }
+                // except for notes. Replace in stead of appending note
+                else {
+                    item.mods.alt = {
+                        subtitle: `Overwrite note...`,
+                        variables: {
+                            overwriteNote: 'true',
+                            ...variables,
+                            taskNotes: ''
+                        }
+                    };
+                }
+
+                return item;
+            });
 
         const totalTimeToday = response.time_entries.reduce((acc, entry) => {
             return acc + entry.hours;
@@ -61,7 +85,7 @@ await apiCall(url, 'GET')
                 subtitle: `Press 'Enter' to select a new timer...`,
                 autocomplete: 'hnew',
                 valid: true,
-                icon: { path: 'src/icons/add.png' },
+                icon: { path: 'src/icons/start-new.png' },
                 variables: {
                     goTo: 'newTask'
                 }
@@ -72,7 +96,7 @@ await apiCall(url, 'GET')
         items.push({
             title: `Total: ${roundTime(totalTimeToday)}`,
             valid: false,
-            icon: { path: 'src/icons/add.png' }
+            icon: { path: 'src/icons/total.png' }
         });
 
         alfy.output(items);
