@@ -11,6 +11,7 @@ await apiCall(url, 'GET')
     .then(response => {
         const items = alfy
             .inputMatches(response.task_assignments, 'task.name')
+            .filter(element => element.is_active)
             .map(element => ({
                 uid: element.id,
                 title: element.task.name,

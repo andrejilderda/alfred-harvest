@@ -8,6 +8,7 @@ const url = 'https://api.harvestapp.com/v2/projects';
 await apiCall(url, 'GET')
     .then(response => {
         const items = alfy.inputMatches(response.projects, 'name')
+            .filter(element => element.is_active)
             .map(element => ({
                 uid: element.id,
                 title: `${element.name}, ${element.client.name}`,
