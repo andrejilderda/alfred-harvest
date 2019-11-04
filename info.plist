@@ -32,44 +32,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>0A547B3A-0DAF-4A66-9143-70DF21977BF4</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>A26EEE56-3E2C-4CD3-BF0F-4CE2525CF909</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>C298C18E-1C1B-4C64-AEFF-4E16D676526C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>10A9385B-5D71-48E2-B646-4A04AEACC988</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>C298C18E-1C1B-4C64-AEFF-4E16D676526C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>41298D53-42B4-434F-BBB6-0A5CA8ACE342</string>
+				<string>C0709F3E-C6AF-4080-A47D-A9CE8A2EB431</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -108,7 +75,20 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>BBE0C5A3-5BBE-4AD5-B1AB-74E31B243A6F</string>
+				<string>10A9385B-5D71-48E2-B646-4A04AEACC988</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>32F454CC-A5B5-4F03-9B29-0728BF73FFD8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>10A9385B-5D71-48E2-B646-4A04AEACC988</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -148,7 +128,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</string>
+				<string>5F7B814D-F8F3-43CA-B5E7-833ABE4BF2EF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -158,7 +138,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>312BEE9D-8202-4A6A-94DB-4B0EDF21CBCF</string>
+				<string>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -184,17 +164,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>5C9D71E5-5317-4C7C-BF5A-C6208E2200D1</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>C298C18E-1C1B-4C64-AEFF-4E16D676526C</string>
+				<string>C0709F3E-C6AF-4080-A47D-A9CE8A2EB431</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -207,7 +177,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0A547B3A-0DAF-4A66-9143-70DF21977BF4</string>
+				<string>32F454CC-A5B5-4F03-9B29-0728BF73FFD8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -226,11 +196,36 @@
 				<false/>
 			</dict>
 		</array>
+		<key>5F7B814D-F8F3-43CA-B5E7-833ABE4BF2EF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6EA70050-3CCB-46A4-8E70-821AEF5E7B8B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>A60C78B6-70F6-4D3A-91AB-E8AA1A4BC5A3</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>312BEE9D-8202-4A6A-94DB-4B0EDF21CBCF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>66B87F74-D220-42E2-ACD4-34829FE9910B</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</string>
+				<string>26507ACC-53B4-41B3-BB13-369E9526206D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -240,7 +235,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>26507ACC-53B4-41B3-BB13-369E9526206D</string>
+				<string>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -262,11 +257,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>8081AC7B-0B05-4143-80E4-BAEB6ADDCBE7</key>
+		<key>6EA70050-3CCB-46A4-8E70-821AEF5E7B8B</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>DA7C946A-EDF1-4144-8039-F20AF8414652</string>
+				<string>10A9385B-5D71-48E2-B646-4A04AEACC988</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -274,9 +269,12 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>8081AC7B-0B05-4143-80E4-BAEB6ADDCBE7</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>025C086B-30F8-43AC-B27A-B6006C38D6A1</string>
+				<string>C0709F3E-C6AF-4080-A47D-A9CE8A2EB431</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -347,19 +345,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>BBE0C5A3-5BBE-4AD5-B1AB-74E31B243A6F</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C298C18E-1C1B-4C64-AEFF-4E16D676526C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>BC08FC7F-F5A6-4644-8D5C-84A03EAEFD09</key>
 		<array>
 			<dict>
@@ -388,19 +373,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1F6B3533-78FF-4E8A-9E00-01F023781E9D</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>C298C18E-1C1B-4C64-AEFF-4E16D676526C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C0709F3E-C6AF-4080-A47D-A9CE8A2EB431</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -449,64 +421,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>triggerid</key>
-				<string>new</string>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:notification2}</string>
+				<key>title</key>
+				<string>{var:notification1}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>175E5426-7F90-4B87-875D-79D48A250A40</string>
+			<string>1F6B3533-78FF-4E8A-9E00-01F023781E9D</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>hvn</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching available Harvest projects...</string>
-				<key>script</key>
-				<string>./node_modules/.bin/run-node src/list-projects.js "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>View available Harvest projects...</string>
-				<key>title</key>
-				<string>New: Start new timer</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>A19C7560-4E10-4266-9C51-ED0FD18756CA</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -581,17 +512,79 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>'{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
+				<key>triggerid</key>
+				<string>new</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>175E5426-7F90-4B87-875D-79D48A250A40</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>hvn</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching Harvest projects...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node src/list-projects.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>View available Harvest projects...</string>
+				<key>title</key>
+				<string>New: Start new timer</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>5C9D71E5-5317-4C7C-BF5A-C6208E2200D1</string>
+			<string>A19C7560-4E10-4266-9C51-ED0FD18756CA</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>;</string>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>notification</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>C0709F3E-C6AF-4080-A47D-A9CE8A2EB431</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -631,7 +624,7 @@
 				<key>subtext</key>
 				<string>View today's timesheet entries...</string>
 				<key>title</key>
-				<string>Toggle: Toggle task timer</string>
+				<string>Toggle: Start / stop today’s timers</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -652,7 +645,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node src/update-task.js "$1" "toggle"</string>
+				<string>./node_modules/.bin/run-node src/update-task.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -663,160 +656,15 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>0A547B3A-0DAF-4A66-9143-70DF21977BF4</string>
+			<string>10A9385B-5D71-48E2-B646-4A04AEACC988</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>new</string>
-				<key>passinputasargument</key>
-				<false/>
-				<key>passvariables</key>
-				<false/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>838953DB-B17F-4231-8081-972645959B0E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>'{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>A26EEE56-3E2C-4CD3-BF0F-4CE2525CF909</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:notification2}</string>
-				<key>title</key>
-				<string>{var:notification1}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>1F6B3533-78FF-4E8A-9E00-01F023781E9D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>setup</string>
-				<key>passinputasargument</key>
-				<false/>
-				<key>passvariables</key>
-				<false/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>5D181383-5500-4653-AD63-C5C9558A4E37</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:goTo}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>newTask</string>
-						<key>outputlabel</key>
-						<string>new</string>
-						<key>uid</key>
-						<string>A60C78B6-70F6-4D3A-91AB-E8AA1A4BC5A3</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:goTo}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>setup</string>
-						<key>outputlabel</key>
-						<string>setup</string>
-						<key>uid</key>
-						<string>1F7FAE15-412F-4FA7-8F78-CD14A6A9FBCD</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>bail</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>4527DE0A-A0A1-4B8B-AECD-D59403110FAB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
-			<string>C298C18E-1C1B-4C64-AEFF-4E16D676526C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string>;</string>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>notification</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>C0709F3E-C6AF-4080-A47D-A9CE8A2EB431</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</string>
+			<string>32F454CC-A5B5-4F03-9B29-0728BF73FFD8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -870,29 +718,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>./node_modules/.bin/run-node src/update-task.js "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>10A9385B-5D71-48E2-B646-4A04AEACC988</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -942,36 +767,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>'{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>41298D53-42B4-434F-BBB6-0A5CA8ACE342</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>subtext</key>
 				<string>{var:taskClientName}, {var:taskName} ({var:taskHours})</string>
 				<key>text</key>
-				<string>Add note: {var:taskNotes}{query}</string>
+				<string>Replace note: {query}</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>312BEE9D-8202-4A6A-94DB-4B0EDF21CBCF</string>
+			<string>6EA70050-3CCB-46A4-8E70-821AEF5E7B8B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1027,44 +835,30 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>./node_modules/.bin/run-node src/update-task.js "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:overwriteNote}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>true</string>
+						<key>outputlabel</key>
+						<string>overwrite</string>
+						<key>uid</key>
+						<string>A60C78B6-70F6-4D3A-91AB-E8AA1A4BC5A3</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>append</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>BBE0C5A3-5BBE-4AD5-B1AB-74E31B243A6F</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-				<key>title</key>
-				<string>All setup!</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>DA7C946A-EDF1-4144-8039-F20AF8414652</string>
+			<string>5F7B814D-F8F3-43CA-B5E7-833ABE4BF2EF</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1073,19 +867,107 @@
 			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
-				<key>keyword</key>
-				<string></string>
 				<key>subtext</key>
-				<string>Use account id: {query}</string>
+				<string>{var:taskClientName}, {var:taskName} ({var:taskHours})</string>
 				<key>text</key>
-				<string>Enter Harvest account id...</string>
+				<string>Add note: {var:taskNotes}{query}</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</string>
+			<string>312BEE9D-8202-4A6A-94DB-4B0EDF21CBCF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>new</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>838953DB-B17F-4231-8081-972645959B0E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:goTo}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>newTask</string>
+						<key>outputlabel</key>
+						<string>new</string>
+						<key>uid</key>
+						<string>A60C78B6-70F6-4D3A-91AB-E8AA1A4BC5A3</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:goTo}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>setup</string>
+						<key>outputlabel</key>
+						<string>setup</string>
+						<key>uid</key>
+						<string>1F7FAE15-412F-4FA7-8F78-CD14A6A9FBCD</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>bail</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>4527DE0A-A0A1-4B8B-AECD-D59403110FAB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>setup</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>5D181383-5500-4653-AD63-C5C9558A4E37</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1111,6 +993,27 @@
 			<string>8081AC7B-0B05-4143-80E4-BAEB6ADDCBE7</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Use account id: {query}</string>
+				<key>text</key>
+				<string>Enter Harvest account id...</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1206,23 +1109,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>'{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>025C086B-30F8-43AC-B27A-B6006C38D6A1</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
@@ -1289,9 +1175,9 @@
 				<key>keyword</key>
 				<string>hvl</string>
 				<key>subtext</key>
-				<string>Launch Harvest account in a browser</string>
+				<string>Open your Harvest account in a browser</string>
 				<key>text</key>
-				<string>Launch: Visit Harvest account</string>
+				<string>Launch: Open Harvest account</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -1310,14 +1196,7 @@
 		<key>0113364C-D18F-4B1C-B082-9579BE03D03C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>585</integer>
-			<key>ypos</key>
-			<integer>1040</integer>
-		</dict>
-		<key>025C086B-30F8-43AC-B27A-B6006C38D6A1</key>
-		<dict>
-			<key>xpos</key>
-			<integer>1360</integer>
+			<integer>705</integer>
 			<key>ypos</key>
 			<integer>1070</integer>
 		</dict>
@@ -1326,156 +1205,154 @@
 			<key>note</key>
 			<string>Visit Harvest account</string>
 			<key>xpos</key>
-			<integer>290</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>1345</integer>
-		</dict>
-		<key>0A547B3A-0DAF-4A66-9143-70DF21977BF4</key>
-		<dict>
-			<key>note</key>
-			<string>Toggle/delete task</string>
-			<key>xpos</key>
-			<integer>585</integer>
-			<key>ypos</key>
-			<integer>350</integer>
+			<integer>1385</integer>
 		</dict>
 		<key>10A9385B-5D71-48E2-B646-4A04AEACC988</key>
 		<dict>
 			<key>note</key>
 			<string>Update task</string>
 			<key>xpos</key>
-			<integer>880</integer>
+			<integer>1010</integer>
 			<key>ypos</key>
-			<integer>650</integer>
+			<integer>240</integer>
 		</dict>
 		<key>175E5426-7F90-4B87-875D-79D48A250A40</key>
 		<dict>
 			<key>xpos</key>
-			<integer>90</integer>
+			<integer>215</integer>
 			<key>ypos</key>
-			<integer>135</integer>
+			<integer>85</integer>
 		</dict>
 		<key>1F6B3533-78FF-4E8A-9E00-01F023781E9D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1680</integer>
+			<integer>1470</integer>
 			<key>ypos</key>
-			<integer>500</integer>
+			<integer>75</integer>
 		</dict>
 		<key>26507ACC-53B4-41B3-BB13-369E9526206D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>585</integer>
+			<integer>705</integer>
 			<key>ypos</key>
-			<integer>650</integer>
+			<integer>400</integer>
 		</dict>
 		<key>312BEE9D-8202-4A6A-94DB-4B0EDF21CBCF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>585</integer>
+			<integer>705</integer>
 			<key>ypos</key>
-			<integer>840</integer>
+			<integer>705</integer>
 		</dict>
-		<key>41298D53-42B4-434F-BBB6-0A5CA8ACE342</key>
+		<key>32F454CC-A5B5-4F03-9B29-0728BF73FFD8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1095</integer>
+			<integer>745</integer>
 			<key>ypos</key>
-			<integer>680</integer>
+			<integer>270</integer>
 		</dict>
 		<key>4527DE0A-A0A1-4B8B-AECD-D59403110FAB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>770</integer>
+			<integer>870</integer>
 			<key>ypos</key>
-			<integer>530</integer>
+			<integer>835</integer>
 		</dict>
 		<key>4BD27885-AC87-4EF7-98CE-226F5763B797</key>
 		<dict>
 			<key>note</key>
 			<string>List today's timers</string>
 			<key>xpos</key>
-			<integer>285</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>840</integer>
+			<integer>590</integer>
 		</dict>
 		<key>4D20F682-D9F7-4E8A-B796-D566688B4F12</key>
 		<dict>
 			<key>xpos</key>
-			<integer>475</integer>
+			<integer>705</integer>
 			<key>ypos</key>
-			<integer>1205</integer>
+			<integer>1225</integer>
 		</dict>
 		<key>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>880</integer>
+			<integer>855</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1070</integer>
 		</dict>
 		<key>517AB5D6-54BC-4934-B4E7-FB64EB91E791</key>
 		<dict>
 			<key>note</key>
 			<string>Start project task</string>
 			<key>xpos</key>
-			<integer>880</integer>
+			<integer>1010</integer>
 			<key>ypos</key>
-			<integer>135</integer>
+			<integer>80</integer>
 		</dict>
 		<key>53C8FEA0-BA4E-47E1-AE2D-2FFFD6247AC1</key>
 		<dict>
 			<key>note</key>
 			<string>List today's timers</string>
 			<key>xpos</key>
-			<integer>285</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>350</integer>
-		</dict>
-		<key>5C9D71E5-5317-4C7C-BF5A-C6208E2200D1</key>
-		<dict>
-			<key>xpos</key>
-			<integer>1110</integer>
-			<key>ypos</key>
-			<integer>250</integer>
+			<integer>240</integer>
 		</dict>
 		<key>5D181383-5500-4653-AD63-C5C9558A4E37</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1075</integer>
+			<integer>1010</integer>
 			<key>ypos</key>
-			<integer>525</integer>
+			<integer>930</integer>
+		</dict>
+		<key>5F7B814D-F8F3-43CA-B5E7-833ABE4BF2EF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>575</integer>
+			<key>ypos</key>
+			<integer>610</integer>
 		</dict>
 		<key>66B87F74-D220-42E2-ACD4-34829FE9910B</key>
 		<dict>
 			<key>note</key>
 			<string>List today's timers</string>
 			<key>xpos</key>
-			<integer>285</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>650</integer>
+			<integer>400</integer>
 		</dict>
 		<key>69514FE5-98AF-4C7F-866F-F336EF17E951</key>
 		<dict>
 			<key>xpos</key>
-			<integer>90</integer>
+			<integer>210</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1070</integer>
+		</dict>
+		<key>6EA70050-3CCB-46A4-8E70-821AEF5E7B8B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>705</integer>
+			<key>ypos</key>
+			<integer>575</integer>
 		</dict>
 		<key>8081AC7B-0B05-4143-80E4-BAEB6ADDCBE7</key>
 		<dict>
 			<key>note</key>
 			<string>Store credentials</string>
 			<key>xpos</key>
-			<integer>1175</integer>
+			<integer>1010</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1065</integer>
 		</dict>
 		<key>838953DB-B17F-4231-8081-972645959B0E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1070</integer>
+			<integer>1010</integer>
 			<key>ypos</key>
-			<integer>375</integer>
+			<integer>805</integer>
 		</dict>
 		<key>8C54B474-C735-4821-AD9F-4A05DB67488A</key>
 		<dict>
@@ -1484,94 +1361,66 @@
 			<key>note</key>
 			<string>Store account id</string>
 			<key>xpos</key>
-			<integer>1065</integer>
+			<integer>970</integer>
 			<key>ypos</key>
-			<integer>1070</integer>
+			<integer>1145</integer>
 		</dict>
 		<key>A19C7560-4E10-4266-9C51-ED0FD18756CA</key>
 		<dict>
 			<key>note</key>
 			<string>List projects</string>
 			<key>xpos</key>
-			<integer>285</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>135</integer>
-		</dict>
-		<key>A26EEE56-3E2C-4CD3-BF0F-4CE2525CF909</key>
-		<dict>
-			<key>xpos</key>
-			<integer>925</integer>
-			<key>ypos</key>
-			<integer>380</integer>
+			<integer>85</integer>
 		</dict>
 		<key>B0A6E1FF-0297-4C8E-A114-C63A67C41C70</key>
 		<dict>
 			<key>note</key>
 			<string>Get account id</string>
 			<key>xpos</key>
-			<integer>590</integer>
+			<integer>705</integer>
 			<key>ypos</key>
-			<integer>1345</integer>
+			<integer>1385</integer>
 		</dict>
 		<key>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</key>
 		<dict>
-			<key>xpos</key>
-			<integer>585</integer>
-			<key>ypos</key>
-			<integer>555</integer>
-		</dict>
-		<key>BBE0C5A3-5BBE-4AD5-B1AB-74E31B243A6F</key>
-		<dict>
 			<key>note</key>
-			<string>Update task</string>
+			<string>Not setup yet or no timers started today</string>
 			<key>xpos</key>
-			<integer>880</integer>
+			<integer>745</integer>
 			<key>ypos</key>
-			<integer>840</integer>
+			<integer>860</integer>
 		</dict>
 		<key>BC08FC7F-F5A6-4644-8D5C-84A03EAEFD09</key>
 		<dict>
 			<key>xpos</key>
-			<integer>285</integer>
+			<integer>405</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1070</integer>
 		</dict>
 		<key>C0709F3E-C6AF-4080-A47D-A9CE8A2EB431</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1555</integer>
+			<integer>1345</integer>
 			<key>ypos</key>
-			<integer>530</integer>
-		</dict>
-		<key>C298C18E-1C1B-4C64-AEFF-4E16D676526C</key>
-		<dict>
-			<key>xpos</key>
-			<integer>1420</integer>
-			<key>ypos</key>
-			<integer>530</integer>
-		</dict>
-		<key>DA7C946A-EDF1-4144-8039-F20AF8414652</key>
-		<dict>
-			<key>xpos</key>
-			<integer>1380</integer>
-			<key>ypos</key>
-			<integer>960</integer>
+			<integer>105</integer>
 		</dict>
 		<key>E8BD4C0F-6FE1-4808-87EC-951DB65A6F0B</key>
 		<dict>
 			<key>note</key>
 			<string>List project tasks</string>
 			<key>xpos</key>
-			<integer>585</integer>
+			<integer>705</integer>
 			<key>ypos</key>
-			<integer>135</integer>
+			<integer>80</integer>
 		</dict>
 		<key>F2B31BB7-F4E2-4BFF-9DC8-77F7366DF9EF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>885</integer>
+			<integer>1010</integer>
 			<key>ypos</key>
-			<integer>1345</integer>
+			<integer>1385</integer>
 		</dict>
 		<key>FBF5E782-D12B-4359-A4EF-83F6217D9394</key>
 		<dict>
@@ -1580,9 +1429,9 @@
 			<key>note</key>
 			<string>Store token</string>
 			<key>xpos</key>
-			<integer>765</integer>
+			<integer>820</integer>
 			<key>ypos</key>
-			<integer>1070</integer>
+			<integer>1145</integer>
 		</dict>
 	</dict>
 	<key>variablesdontexport</key>
