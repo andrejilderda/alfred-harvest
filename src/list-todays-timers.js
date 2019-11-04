@@ -40,6 +40,9 @@ await apiCall(url, 'GET')
                     mods: {}
                 }
 
+                // make sure running timers are on top
+                if (element.is_running) item.uid = '0';
+
                 if (action === 'note') {
                     item.icon = {
                         path: `${element.is_running ? 'src/icons/note-active.png' : 'src/icons/note-inactive.png'}`
