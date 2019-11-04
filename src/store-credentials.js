@@ -21,7 +21,10 @@ execute(`security delete-generic-password -a 'apitoken' -s 'com.andrejilderda.ha
 
 execute(`security add-generic-password -a 'apitoken' -s 'com.andrejilderda.harvest' -w '${token}'`)
     .then(token => {
-        console.log(successMessage);
+        notify(
+            'All setup!',
+            'Type ‘hvn’ to list projects and start a new timer.'
+        );
     }).catch(error => {
         // show notice when there's already a key stored in the keychain
         // (highly unlikely since we delete previous entries)
