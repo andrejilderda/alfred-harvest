@@ -20,7 +20,7 @@ await apiCall(url, 'GET')
                     taskName: element.task.name
                 },
                 icon: {
-                    path: 'src/icons/go.png'
+                    path: 'src/icons/start.png'
                 }
             }));
 

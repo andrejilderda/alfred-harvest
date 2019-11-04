@@ -35,7 +35,7 @@ await apiCall(url, 'GET')
                         ...variables
                     },
                     icon: {
-                        path: `${element.is_running ? 'src/icons/stop.png' : 'src/icons/go.png'}`
+                        path: `${element.is_running ? 'src/icons/stop.png' : 'src/icons/start.png'}`
                     },
                     mods: {
                         alt: {

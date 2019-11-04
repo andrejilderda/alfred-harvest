@@ -17,7 +17,7 @@ await apiCall(url, 'GET')
                     projectName: element.name
                 },
                 icon: {
-                    path: 'src/icons/add.png'
+                    path: 'src/icons/start-new.png'
                 }
             }));
 
