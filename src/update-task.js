@@ -17,9 +17,8 @@ if (action === 'adjust-timer') {
     url = `https://api.harvestapp.com/v2/time_entries/${taskId}?hours=${taskHours}`;
 }
 
-(() => {
-    // bail when user is 'redirected' to other command
-    if (goTo) return;
+// bail when user is 'redirected' to other command
+if (!goTo) {
 
     await apiCall(url, requestMethod)
         .then(response => {
@@ -59,4 +58,4 @@ if (action === 'adjust-timer') {
                 'Check your network connection and try again.'
             );
         });
-});
+}
