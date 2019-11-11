@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.andrejilderda.harvest</string>
+	<key>category</key>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>0113364C-D18F-4B1C-B082-9579BE03D03C</key>
@@ -341,6 +343,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>95216047-EA9F-4964-8D5E-C79FC9FADE40</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>BC08FC7F-F5A6-4644-8D5C-84A03EAEFD09</key>
 		<array>
@@ -408,7 +420,7 @@
 	<key>createdby</key>
 	<string>Andre Jilderda</string>
 	<key>description</key>
-	<string></string>
+	<string>Control your Harvest timers directly from Alfred</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -961,6 +973,97 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
+readonly remote_info_plist='https://raw.githubusercontent.com/ajilderda/alfred-harvest-v2/master/info.plist'
+readonly workflow_url='ajilderda/alfred-harvest-v2'
+readonly download_type='github_release'
+readonly frequency_check='4'
+
+# FROM HERE ON, CODE SHOULD BE LEFT UNTOUCHED!
+function abort {
+  echo "${1}" &gt;&amp;2
+  exit 1
+}
+
+function url_exists {
+  curl --silent --location --output /dev/null --fail --range 0-0 "${1}"
+}
+
+function notification {
+  readonly local notificator="$(find . -type d -name 'Notificator.app')"
+  if [[ -n "${notificator}" ]]; then
+    "${notificator}/Contents/Resources/Scripts/notificator" --message "${1}" --title "${alfred_workflow_name}" --subtitle 'A new version is available'
+    return
+  fi
+
+  readonly local terminal_notifier="$(find . -type f -name 'terminal-notifier')"
+  if [[ -n "${terminal_notifier}" ]]; then
+    "${terminal_notifier}" -title "${alfred_workflow_name}" -subtitle 'A new version is available' -message "${1}"
+    return
+  fi
+
+  osascript -e "display notification \"${1}\" with title \"${alfred_workflow_name}\" subtitle \"A new version is available\""
+}
+
+# Local sanity checks
+readonly local_info_plist='info.plist'
+readonly local_version="$(/usr/libexec/PlistBuddy -c 'print version' "${local_info_plist}")"
+
+[[ -n "${local_version}" ]] || abort 'You need to set a workflow version in the configuration sheet.'
+[[ "${download_type}" =~ ^(direct|page|github_release)$ ]] || abort "'download_type' (${download_type}) needs to be one of 'direct', 'page', or 'github_release'."
+[[ "${frequency_check}" =~ ^[0-9]+$ ]] || abort "'frequency_check' (${frequency_check}) needs to be a number."
+
+# Check for updates
+if [[ $(find "${local_info_plist}" -mtime +"${frequency_check}"d) ]]; then
+  if ! url_exists "${remote_info_plist}"; then abort "'remote_info_plist' (${remote_info_plist}) appears to not be reachable."; fi # Remote sanity check
+
+  readonly tmp_file="$(mktemp)"
+  curl --silent --location --output "${tmp_file}" "${remote_info_plist}"
+  readonly remote_version="$(/usr/libexec/PlistBuddy -c 'print version' "${tmp_file}")"
+
+  if [[ "${local_version}" == "${remote_version}" ]]; then
+    touch "${local_info_plist}" # Reset timer by touching local file
+    exit 0
+  fi
+
+  if [[ "${download_type}" == 'page' ]]; then
+    notification 'Opening download page…'
+    open "${workflow_url}"
+    exit 0
+  fi
+
+  download_url="$([[ "${download_type}" == 'github_release' ]] &amp;&amp; curl --silent "https://api.github.com/repos/${workflow_url}/releases/latest" | grep 'browser_download_url' | head -1 | sed -E 's/.*browser_download_url": "(.*)"/\1/' || echo "${workflow_url}")"
+
+  if url_exists "${download_url}"; then
+    notification 'Downloading and installing…'
+    curl --silent --location --output "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow" "${download_url}"
+    open "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow"
+  else
+    abort "'workflow_url' (${download_url}) appears to not be reachable."
+  fi
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>95216047-EA9F-4964-8D5E-C79FC9FADE40</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>setup</string>
 				<key>passinputasargument</key>
@@ -1196,7 +1299,8 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>For more information head over to:
+https://github.com/ajilderda/alfred-harvest-v2</string>
 	<key>uidata</key>
 	<dict>
 		<key>0113364C-D18F-4B1C-B082-9579BE03D03C</key>
@@ -1204,7 +1308,7 @@
 			<key>xpos</key>
 			<integer>705</integer>
 			<key>ypos</key>
-			<integer>1070</integer>
+			<integer>1120</integer>
 		</dict>
 		<key>09486CA1-43C7-4848-96B4-788B51FC0742</key>
 		<dict>
@@ -1213,7 +1317,7 @@
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>1385</integer>
+			<integer>1435</integer>
 		</dict>
 		<key>0B6F5697-9058-4949-AD01-9997864C51A0</key>
 		<dict>
@@ -1280,14 +1384,14 @@
 			<key>xpos</key>
 			<integer>705</integer>
 			<key>ypos</key>
-			<integer>1225</integer>
+			<integer>1275</integer>
 		</dict>
 		<key>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</key>
 		<dict>
 			<key>xpos</key>
 			<integer>855</integer>
 			<key>ypos</key>
-			<integer>1070</integer>
+			<integer>1120</integer>
 		</dict>
 		<key>517AB5D6-54BC-4934-B4E7-FB64EB91E791</key>
 		<dict>
@@ -1312,7 +1416,7 @@
 			<key>xpos</key>
 			<integer>1010</integer>
 			<key>ypos</key>
-			<integer>930</integer>
+			<integer>955</integer>
 		</dict>
 		<key>5F7B814D-F8F3-43CA-B5E7-833ABE4BF2EF</key>
 		<dict>
@@ -1335,7 +1439,7 @@
 			<key>xpos</key>
 			<integer>210</integer>
 			<key>ypos</key>
-			<integer>1070</integer>
+			<integer>1120</integer>
 		</dict>
 		<key>6EA70050-3CCB-46A4-8E70-821AEF5E7B8B</key>
 		<dict>
@@ -1351,7 +1455,7 @@
 			<key>xpos</key>
 			<integer>1010</integer>
 			<key>ypos</key>
-			<integer>1065</integer>
+			<integer>1115</integer>
 		</dict>
 		<key>838953DB-B17F-4231-8081-972645959B0E</key>
 		<dict>
@@ -1369,7 +1473,18 @@
 			<key>xpos</key>
 			<integer>970</integer>
 			<key>ypos</key>
-			<integer>1145</integer>
+			<integer>1195</integer>
+		</dict>
+		<key>95216047-EA9F-4964-8D5E-C79FC9FADE40</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>12</integer>
+			<key>note</key>
+			<string>OneUpdater</string>
+			<key>xpos</key>
+			<integer>855</integer>
+			<key>ypos</key>
+			<integer>955</integer>
 		</dict>
 		<key>A19C7560-4E10-4266-9C51-ED0FD18756CA</key>
 		<dict>
@@ -1387,7 +1502,7 @@
 			<key>xpos</key>
 			<integer>705</integer>
 			<key>ypos</key>
-			<integer>1385</integer>
+			<integer>1435</integer>
 		</dict>
 		<key>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</key>
 		<dict>
@@ -1403,7 +1518,7 @@
 			<key>xpos</key>
 			<integer>405</integer>
 			<key>ypos</key>
-			<integer>1070</integer>
+			<integer>1120</integer>
 		</dict>
 		<key>C0709F3E-C6AF-4080-A47D-A9CE8A2EB431</key>
 		<dict>
@@ -1426,7 +1541,7 @@
 			<key>xpos</key>
 			<integer>1010</integer>
 			<key>ypos</key>
-			<integer>1385</integer>
+			<integer>1435</integer>
 		</dict>
 		<key>FBF5E782-D12B-4359-A4EF-83F6217D9394</key>
 		<dict>
@@ -1437,13 +1552,13 @@
 			<key>xpos</key>
 			<integer>820</integer>
 			<key>ypos</key>
-			<integer>1145</integer>
+			<integer>1195</integer>
 		</dict>
 	</dict>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string></string>
+	<string>1.0.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/ajilderda/alfred-harvest-v2</string>
 </dict>
