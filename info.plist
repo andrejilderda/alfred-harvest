@@ -84,19 +84,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>32F454CC-A5B5-4F03-9B29-0728BF73FFD8</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>10A9385B-5D71-48E2-B646-4A04AEACC988</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>4527DE0A-A0A1-4B8B-AECD-D59403110FAB</key>
 		<array>
 			<dict>
@@ -177,7 +164,17 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>32F454CC-A5B5-4F03-9B29-0728BF73FFD8</string>
+				<string>0B6F5697-9058-4949-AD01-9997864C51A0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>10A9385B-5D71-48E2-B646-4A04AEACC988</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -421,6 +418,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>'{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>0B6F5697-9058-4949-AD01-9997864C51A0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -438,29 +452,6 @@
 			<string>1F6B3533-78FF-4E8A-9E00-01F023781E9D</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>./node_modules/.bin/run-node src/start-project-task.js "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>517AB5D6-54BC-4934-B4E7-FB64EB91E791</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -512,15 +503,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>triggerid</key>
-				<string>new</string>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node src/start-project-task.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>175E5426-7F90-4B87-875D-79D48A250A40</string>
+			<string>517AB5D6-54BC-4934-B4E7-FB64EB91E791</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -574,6 +575,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>triggerid</key>
+				<string>new</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>175E5426-7F90-4B87-875D-79D48A250A40</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>delimiter</key>
 				<string>;</string>
 				<key>trimarguments</key>
@@ -587,6 +601,29 @@
 			<string>C0709F3E-C6AF-4080-A47D-A9CE8A2EB431</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node src/update-task.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>10A9385B-5D71-48E2-B646-4A04AEACC988</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -640,33 +677,51 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
+				<key>keyword</key>
+				<string>hva</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching today's timesheet...</string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node src/update-task.js "$1"</string>
+				<string>./node_modules/.bin/run-node src/list-todays-timers.js "$1" "adjust"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>subtext</key>
+				<string>View today's timesheet entries...</string>
+				<key>title</key>
+				<string>Adjust: Adjust task timer</string>
 				<key>type</key>
 				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>10A9385B-5D71-48E2-B646-4A04AEACC988</string>
+			<string>66B87F74-D220-42E2-ACD4-34829FE9910B</string>
 			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>32F454CC-A5B5-4F03-9B29-0728BF73FFD8</string>
-			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -712,55 +767,6 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>26507ACC-53B4-41B3-BB13-369E9526206D</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>hva</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Fetching today's timesheet...</string>
-				<key>script</key>
-				<string>./node_modules/.bin/run-node src/list-todays-timers.js "$1" "adjust"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>View today's timesheet entries...</string>
-				<key>title</key>
-				<string>Adjust: Adjust task timer</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>66B87F74-D220-42E2-ACD4-34829FE9910B</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -1002,16 +1008,16 @@
 				<key>keyword</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Use account id: {query}</string>
+				<string>Use API token: {query}</string>
 				<key>text</key>
-				<string>Enter Harvest account id...</string>
+				<string>Enter your Harvest API token...</string>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</string>
+			<string>0113364C-D18F-4B1C-B082-9579BE03D03C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1025,27 +1031,6 @@
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
 			<string>69514FE5-98AF-4C7F-866F-F336EF17E951</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Use API token: {query}</string>
-				<key>text</key>
-				<string>Enter your Harvest API token...</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>0113364C-D18F-4B1C-B082-9579BE03D03C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1073,18 +1058,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
 				<string></string>
-				<key>variables</key>
-				<dict>
-					<key>account_id</key>
-					<string>{query}</string>
-				</dict>
+				<key>subtext</key>
+				<string>Use account id: {query}</string>
+				<key>text</key>
+				<string>Enter Harvest account id...</string>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>8C54B474-C735-4821-AD9F-4A05DB67488A</string>
+			<string>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1109,12 +1097,30 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>account_id</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>8C54B474-C735-4821-AD9F-4A05DB67488A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://github.com/ajilderda/alfred-harvest-v2#setup</string>
+				<string>https://github.com/ajilderda/alfred-harvest-v2#installation--setup</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -1147,6 +1153,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>hvl</string>
+				<key>subtext</key>
+				<string>Open your Harvest account in a browser</string>
+				<key>text</key>
+				<string>Launch: Open Harvest account</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>09486CA1-43C7-4848-96B4-788B51FC0742</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1166,27 +1193,6 @@
 			<string>B0A6E1FF-0297-4C8E-A114-C63A67C41C70</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>hvl</string>
-				<key>subtext</key>
-				<string>Open your Harvest account in a browser</string>
-				<key>text</key>
-				<string>Launch: Open Harvest account</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>09486CA1-43C7-4848-96B4-788B51FC0742</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -1208,6 +1214,13 @@
 			<integer>410</integer>
 			<key>ypos</key>
 			<integer>1385</integer>
+		</dict>
+		<key>0B6F5697-9058-4949-AD01-9997864C51A0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>595</integer>
+			<key>ypos</key>
+			<integer>10</integer>
 		</dict>
 		<key>10A9385B-5D71-48E2-B646-4A04AEACC988</key>
 		<dict>
@@ -1245,13 +1258,6 @@
 			<integer>705</integer>
 			<key>ypos</key>
 			<integer>705</integer>
-		</dict>
-		<key>32F454CC-A5B5-4F03-9B29-0728BF73FFD8</key>
-		<dict>
-			<key>xpos</key>
-			<integer>745</integer>
-			<key>ypos</key>
-			<integer>270</integer>
 		</dict>
 		<key>4527DE0A-A0A1-4B8B-AECD-D59403110FAB</key>
 		<dict>
