@@ -4,8 +4,9 @@ import { getToday, roundTime } from './utils/time';
 const alfy = require('alfy');
 
 const today = getToday();
+const userId = alfy.config.get('userId') || '';
 
-const url = `https://api.harvestapp.com/v2/time_entries?from=${today}&to=${today}`
+const url = `https://api.harvestapp.com/v2/time_entries?user_id=${userId}&from=${today}&to=${today}`;
 
 const action = process.argv[3] || ''; // toggle|note
 const actionPrefix = action === 'note' ? 'Add note: ' : '';
