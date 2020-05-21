@@ -2,6 +2,11 @@ const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 const alfy = require('alfy');
 
+export const execute = async (command) => {
+    const { stdout } = await exec(command);
+    return stdout;
+};
+
 /**
  * call the Harvest API and returns a promise with the result
  *
@@ -14,11 +19,6 @@ export const apiCall = async (url, method) => {
     const accountId = alfy.config.get('accountId');
 
     if (!accountId) throw new Error('Missing account id. Have you setup correctly?');
-
-    const execute = async (command) => {
-        const { stdout, stderr } = await exec(command);
-        return stdout;
-    };
 
     const fetchApi = async (token) => {
         return alfy.fetch(url, {
