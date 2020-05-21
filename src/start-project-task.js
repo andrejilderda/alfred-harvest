@@ -7,9 +7,8 @@ const vars = process.env;
 const { projectId, projectName, taskId, taskName } = vars;
 
 const today = getToday();
-const userId = alfy.config.get('userId') || '';
 
-const url = `https://api.harvestapp.com/v2/time_entries?user_id=${userId}&project_id=${projectId}&task_id=${taskId}&spent_date=${today}`;
+const url = `https://api.harvestapp.com/v2/time_entries?project_id=${projectId}&task_id=${taskId}&spent_date=${today}`;
 
 await apiCall(url, 'POST')
     .then(response => {
