@@ -1,5 +1,4 @@
 import { alfredError } from './utils/errors';
-import { apiCall } from './utils/helpers';
 const alfy = require('alfy');
 
 const vars = process.env;
@@ -23,6 +22,6 @@ try {
         }));
 
     alfy.output(items);
-} catch(error) {
+} catch (error) {
     alfredError(error, 'Failed to list project tasks.');
 }
