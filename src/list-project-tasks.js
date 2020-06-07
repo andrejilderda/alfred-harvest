@@ -5,12 +5,15 @@ const alfy = require('alfy');
 const vars = process.env;
 const { projectId } = vars;
 
-const url = `https://api.harvestapp.com/v2/projects/${projectId}/task_assignments`;
+const url = 'https://api.harvestapp.com/v2/users/me/project_assignments'
+
 
 await apiCall(url, 'GET')
     .then(response => {
+        const project = response.project_assignments.filter(element => element.project.id == projectId )[0]
+
         const items = alfy
-            .inputMatches(response.task_assignments, 'task.name')
+            .inputMatches(project.task_assignments, 'task.name')
             .filter(element => element.is_active)
             .map(element => ({
                 uid: element.id,
