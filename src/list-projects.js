@@ -15,7 +15,8 @@ await apiCall(url, 'GET')
                 subtitle: 'View available tasks',
                 variables: {
                     projectId: element.project.id,
-                    projectName: element.project.name
+                    projectName: element.project.name,
+                    task_assignments: JSON.stringify(element.task_assignments)
                 },
                 icon: {
                     path: 'src/icons/start-new.png'
