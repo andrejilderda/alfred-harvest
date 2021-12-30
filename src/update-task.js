@@ -9,7 +9,7 @@ let url = `https://api.harvestapp.com/v2/time_entries/${taskId}/${stopRestart}`;
 
 if (action === 'note') {
     const prevNote = taskNotes || '';
-    const newNote = process.argv[2].replace(/– /g, '\n– ')
+    const newNote = process.argv[2].replace(/^\-\s/g, (0 === prevNotelength) ? '-' : '\n- ');
     const note = encodeURIComponent(`${prevNote}${newNote}`);
     url = `https://api.harvestapp.com/v2/time_entries/${taskId}?notes=${note}`;
 }
