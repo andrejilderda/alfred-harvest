@@ -9,8 +9,21 @@ let url = `https://api.harvestapp.com/v2/time_entries/${taskId}/${stopRestart}`;
 
 if (action === 'note') {
     const prevNote = taskNotes || '';
+
+    // Convert any bullets.
     const newNote = process.argv[2].replace(/^(\-|\*|\–)\s?/g, (0 === prevNote.length) ? '\u2022 ' : '\u2022 ');
-    const note = encodeURIComponent(0 === prevNote.length ? newNote : `${prevNote}\n\n${newNote}`);
+
+    // Format previous notes from new notes.
+    const newFormattedNote = (0 === prevNote.length)
+        ? newNote // Just use the new note without any concern for the previous (because there is none).
+
+        // Separate bullets and non-bullets from the previous.
+        : (-1 !== newNote.indexOf('\u2022'))
+            ? `${prevNote}\n${newNote}` // Bullets get a single line separator from the previous note (bullet or otherwise).
+            : `${prevNote}\n\n${newNote}`; // While all other notes get two separators from the previous note.;
+
+    const note = encodeURIComponent(newFormattedNote.trim());
+
     url = `https://api.harvestapp.com/v2/time_entries/${taskId}?notes=${note}`;
 }
 
