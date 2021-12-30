@@ -17,7 +17,7 @@ if (action === 'note') {
     const newFormattedNote = (0 === prevNote.length)
         ? newNote // Just use the new note without any concern for the previous (because there is none).
 
-        // Separate bullets and non-bullets from the previous.
+        // Separate notes/bullets from previous.
         : (-1 !== newNote.indexOf('\u2022'))
             ? `${prevNote}\n${newNote}` // Bullets get a single line separator from the previous note (bullet or otherwise).
             : `${prevNote}\n\n${newNote}`; // While all other notes get two separators from the previous note.;
