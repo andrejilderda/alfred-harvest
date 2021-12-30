@@ -19,8 +19,8 @@ if (action === 'note') {
 
         // Separate notes/bullets from previous.
         : (-1 !== newNote.indexOf('\u2022'))
-            ? `${prevNote}\n${newNote}` // Bullets get a single line separator from the previous note (bullet or otherwise).
-            : `${prevNote}\n\n${newNote}`; // While all other notes get two separators from the previous note.;
+            ? `${prevNote}\n${newNote}` // Bullets get a single line separator \n from the previous note (bullet or otherwise).
+            : `${prevNote}\n\n${newNote}`; // While all other notes get two separators \n\n from the previous.
 
     const note = encodeURIComponent(newFormattedNote.trim());
 
