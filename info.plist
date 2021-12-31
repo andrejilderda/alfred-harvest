@@ -979,8 +979,8 @@
 				<integer>0</integer>
 				<key>script</key>
 				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
-readonly remote_info_plist='https://raw.githubusercontent.com/ajilderda/alfred-harvest-v2/master/info.plist'
-readonly workflow_url='ajilderda/alfred-harvest-v2'
+readonly remote_info_plist='https://raw.githubusercontent.com/andrejilderda/alfred-harvest-v2/master/info.plist'
+readonly workflow_url='andrejilderda/alfred-harvest-v2'
 readonly download_type='github_release'
 readonly frequency_check='4'
 
@@ -1223,7 +1223,7 @@ fi</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://github.com/ajilderda/alfred-harvest-v2#installation--setup</string>
+				<string>https://github.com/andrejilderda/alfred-harvest-v2#installation--setup</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -1300,7 +1300,7 @@ fi</string>
 	</array>
 	<key>readme</key>
 	<string>For more information head over to:
-https://github.com/ajilderda/alfred-harvest-v2</string>
+https://github.com/andrejilderda/alfred-harvest-v2</string>
 	<key>uidata</key>
 	<dict>
 		<key>0113364C-D18F-4B1C-B082-9579BE03D03C</key>
@@ -1558,8 +1558,8 @@ https://github.com/ajilderda/alfred-harvest-v2</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.1.4</string>
+	<string>1.1.5</string>
 	<key>webaddress</key>
-	<string>https://github.com/ajilderda/alfred-harvest-v2</string>
+	<string>https://github.com/andrejilderda/alfred-harvest-v2</string>
 </dict>
 </plist>
