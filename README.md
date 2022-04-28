@@ -8,7 +8,7 @@
 
 ## Installation & setup
 
-Install the latest version which you can find under [Releases](https://github.com/andrejilderda/alfred-harvest-v2/releases).
+Install the latest version which you can find under [Releases](https://github.com/andrejilderda/alfred-harvest/releases).
 
 1. Make sure you have [node.js](https://nodejs.org/en/) installed. To check run `node -v` from your terminal.
 2. Go to https://id.getharvest.com/developers › 'Create New Personal Access Token' and give it a name, i.e. 'Alfred workflow'.
