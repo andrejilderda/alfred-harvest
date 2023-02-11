@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "alfy": "^0.9.1"
+    "alfy": "^1.1.0"
   }
 }
