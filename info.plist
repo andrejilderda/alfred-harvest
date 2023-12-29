@@ -1129,7 +1129,7 @@ fi</string>
 				<key>keyword</key>
 				<string>hvs</string>
 				<key>subtext</key>
-				<string>Required: Harvest API token &amp; account id (hold cmd for setup instructions)</string>
+				<string>Required: Harvest API token (hold cmd for setup instructions)</string>
 				<key>text</key>
 				<string>Setup: Set Harvest credentials</string>
 				<key>withspace</key>
@@ -1250,8 +1250,22 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>For more information and installation instructions head over to:
-https://github.com/andrejilderda/alfred-harvest</string>
+	<string># Control your [Harvest](https://www.getharvest.com/) timers using Alfred.
+
+## Features
+
+- Start, stop and adjust timers
+- Delete timers
+- Add/append notes
+- API token is stored in keychain (no password used for authenticating)
+- Uses the latest Harvest API (v2)
+
+## Setup instructions
+
+To finalise the installation follow the instructions at:
+https://github.com/andrejilderda/alfred-harvest#installation--setup
+
+Enjoy!</string>
 	<key>uidata</key>
 	<dict>
 		<key>0113364C-D18F-4B1C-B082-9579BE03D03C</key>

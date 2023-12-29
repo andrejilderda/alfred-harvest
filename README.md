@@ -1,4 +1,4 @@
-## Control your [Harvest](https://www.getharvest.com/) timers directly from [Alfred](https://www.alfredapp.com/).
+## Control your [Harvest](https://www.getharvest.com/) timers using [Alfred](https://www.alfredapp.com/).
 
 - Start, stop and adjust timers
 - Delete timers
