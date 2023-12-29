@@ -1,3 +1,3 @@
 import alfy from 'alfy';
 
-console.log(alfy.config.get('accountId').trim());
+console.log(process.env.account_id.trim());

@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.andrejilderda.harvest</string>
-	<key>category</key>
-	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>0113364C-D18F-4B1C-B082-9579BE03D03C</key>
@@ -128,19 +126,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8C54B474-C735-4821-AD9F-4A05DB67488A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -282,19 +267,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>8C54B474-C735-4821-AD9F-4A05DB67488A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8081AC7B-0B05-4143-80E4-BAEB6ADDCBE7</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>A19C7560-4E10-4266-9C51-ED0FD18756CA</key>
 		<array>
 			<dict>
@@ -407,7 +379,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</string>
+				<string>8081AC7B-0B05-4143-80E4-BAEB6ADDCBE7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -587,6 +559,8 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
 				<key>triggerid</key>
 				<string>new</string>
 			</dict>
@@ -602,6 +576,10 @@
 			<dict>
 				<key>delimiter</key>
 				<string>;</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
 				<key>trimarguments</key>
 				<true/>
 				<key>variableprefix</key>
@@ -872,6 +850,8 @@
 				</array>
 				<key>elselabel</key>
 				<string>append</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -954,6 +934,8 @@
 				</array>
 				<key>elselabel</key>
 				<string>bail</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -979,8 +961,8 @@
 				<integer>0</integer>
 				<key>script</key>
 				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
-readonly remote_info_plist='https://raw.githubusercontent.com/andrejilderda/alfred-harvest-v2/master/info.plist'
-readonly workflow_url='andrejilderda/alfred-harvest-v2'
+readonly remote_info_plist='https://raw.githubusercontent.com/andrejilderda/alfred-harvest/master/info.plist'
+readonly workflow_url='andrejilderda/alfred-harvest'
 readonly download_type='github_release'
 readonly frequency_check='4'
 
@@ -1127,6 +1109,8 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
 				<key>triggerid</key>
 				<string>setup</string>
 			</dict>
@@ -1161,29 +1145,10 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Use account id: {query}</string>
-				<key>text</key>
-				<string>Enter Harvest account id...</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>token</key>
@@ -1200,32 +1165,16 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>variables</key>
-				<dict>
-					<key>account_id</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>8C54B474-C735-4821-AD9F-4A05DB67488A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://github.com/andrejilderda/alfred-harvest-v2#installation--setup</string>
-				<key>utf8</key>
-				<true/>
+				<string>https://github.com/andrejilderda/alfred-harvest#installation--setup</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
@@ -1239,12 +1188,14 @@ fi</string>
 			<dict>
 				<key>browser</key>
 				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
 				<string>https://id.getharvest.com/harvest/sign_in?account_id={query}</string>
-				<key>utf8</key>
-				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
@@ -1299,181 +1250,163 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>For more information head over to:
-https://github.com/andrejilderda/alfred-harvest-v2</string>
+	<string>For more information and installation instructions head over to:
+https://github.com/andrejilderda/alfred-harvest</string>
 	<key>uidata</key>
 	<dict>
 		<key>0113364C-D18F-4B1C-B082-9579BE03D03C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>705</integer>
+			<real>705</real>
 			<key>ypos</key>
-			<integer>1120</integer>
+			<real>1120</real>
 		</dict>
 		<key>09486CA1-43C7-4848-96B4-788B51FC0742</key>
 		<dict>
 			<key>note</key>
 			<string>Visit Harvest account</string>
 			<key>xpos</key>
-			<integer>410</integer>
+			<real>410</real>
 			<key>ypos</key>
-			<integer>1435</integer>
+			<real>1435</real>
 		</dict>
 		<key>0B6F5697-9058-4949-AD01-9997864C51A0</key>
 		<dict>
 			<key>xpos</key>
-			<integer>595</integer>
+			<real>595</real>
 			<key>ypos</key>
-			<integer>10</integer>
+			<real>15</real>
 		</dict>
 		<key>10A9385B-5D71-48E2-B646-4A04AEACC988</key>
 		<dict>
 			<key>note</key>
 			<string>Update task</string>
 			<key>xpos</key>
-			<integer>1010</integer>
+			<real>1010</real>
 			<key>ypos</key>
-			<integer>240</integer>
+			<real>240</real>
 		</dict>
 		<key>175E5426-7F90-4B87-875D-79D48A250A40</key>
 		<dict>
 			<key>xpos</key>
-			<integer>215</integer>
+			<real>215</real>
 			<key>ypos</key>
-			<integer>85</integer>
+			<real>85</real>
 		</dict>
 		<key>1F6B3533-78FF-4E8A-9E00-01F023781E9D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1470</integer>
+			<real>1470</real>
 			<key>ypos</key>
-			<integer>75</integer>
+			<real>75</real>
 		</dict>
 		<key>26507ACC-53B4-41B3-BB13-369E9526206D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>705</integer>
+			<real>705</real>
 			<key>ypos</key>
-			<integer>400</integer>
+			<real>400</real>
 		</dict>
 		<key>312BEE9D-8202-4A6A-94DB-4B0EDF21CBCF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>705</integer>
+			<real>705</real>
 			<key>ypos</key>
-			<integer>705</integer>
+			<real>705</real>
 		</dict>
 		<key>4527DE0A-A0A1-4B8B-AECD-D59403110FAB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>870</integer>
+			<real>870</real>
 			<key>ypos</key>
-			<integer>835</integer>
+			<real>835</real>
 		</dict>
 		<key>4BD27885-AC87-4EF7-98CE-226F5763B797</key>
 		<dict>
 			<key>note</key>
 			<string>List today's timers</string>
 			<key>xpos</key>
-			<integer>410</integer>
+			<real>410</real>
 			<key>ypos</key>
-			<integer>590</integer>
+			<real>590</real>
 		</dict>
 		<key>4D20F682-D9F7-4E8A-B796-D566688B4F12</key>
 		<dict>
 			<key>xpos</key>
-			<integer>705</integer>
+			<real>705</real>
 			<key>ypos</key>
-			<integer>1275</integer>
-		</dict>
-		<key>4F7AFFF4-E724-4B00-B7C1-2FE7A2DE88F4</key>
-		<dict>
-			<key>xpos</key>
-			<integer>855</integer>
-			<key>ypos</key>
-			<integer>1120</integer>
+			<real>1275</real>
 		</dict>
 		<key>517AB5D6-54BC-4934-B4E7-FB64EB91E791</key>
 		<dict>
 			<key>note</key>
 			<string>Start project task</string>
 			<key>xpos</key>
-			<integer>1010</integer>
+			<real>1010</real>
 			<key>ypos</key>
-			<integer>80</integer>
+			<real>80</real>
 		</dict>
 		<key>53C8FEA0-BA4E-47E1-AE2D-2FFFD6247AC1</key>
 		<dict>
 			<key>note</key>
 			<string>List today's timers</string>
 			<key>xpos</key>
-			<integer>410</integer>
+			<real>410</real>
 			<key>ypos</key>
-			<integer>240</integer>
+			<real>240</real>
 		</dict>
 		<key>5D181383-5500-4653-AD63-C5C9558A4E37</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1010</integer>
+			<real>1010</real>
 			<key>ypos</key>
-			<integer>955</integer>
+			<real>955</real>
 		</dict>
 		<key>5F7B814D-F8F3-43CA-B5E7-833ABE4BF2EF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>575</integer>
+			<real>575</real>
 			<key>ypos</key>
-			<integer>610</integer>
+			<real>610</real>
 		</dict>
 		<key>66B87F74-D220-42E2-ACD4-34829FE9910B</key>
 		<dict>
 			<key>note</key>
 			<string>List today's timers</string>
 			<key>xpos</key>
-			<integer>410</integer>
+			<real>410</real>
 			<key>ypos</key>
-			<integer>400</integer>
+			<real>400</real>
 		</dict>
 		<key>69514FE5-98AF-4C7F-866F-F336EF17E951</key>
 		<dict>
 			<key>xpos</key>
-			<integer>210</integer>
+			<real>210</real>
 			<key>ypos</key>
-			<integer>1120</integer>
+			<real>1120</real>
 		</dict>
 		<key>6EA70050-3CCB-46A4-8E70-821AEF5E7B8B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>705</integer>
+			<real>705</real>
 			<key>ypos</key>
-			<integer>575</integer>
+			<real>575</real>
 		</dict>
 		<key>8081AC7B-0B05-4143-80E4-BAEB6ADDCBE7</key>
 		<dict>
 			<key>note</key>
 			<string>Store credentials</string>
 			<key>xpos</key>
-			<integer>1010</integer>
+			<real>1010</real>
 			<key>ypos</key>
-			<integer>1115</integer>
+			<real>1120</real>
 		</dict>
 		<key>838953DB-B17F-4231-8081-972645959B0E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1010</integer>
+			<real>1010</real>
 			<key>ypos</key>
-			<integer>805</integer>
-		</dict>
-		<key>8C54B474-C735-4821-AD9F-4A05DB67488A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>note</key>
-			<string>Store account id</string>
-			<key>xpos</key>
-			<integer>970</integer>
-			<key>ypos</key>
-			<integer>1195</integer>
+			<real>805</real>
 		</dict>
 		<key>95216047-EA9F-4964-8D5E-C79FC9FADE40</key>
 		<dict>
@@ -1482,66 +1415,66 @@ https://github.com/andrejilderda/alfred-harvest-v2</string>
 			<key>note</key>
 			<string>OneUpdater</string>
 			<key>xpos</key>
-			<integer>855</integer>
+			<real>855</real>
 			<key>ypos</key>
-			<integer>955</integer>
+			<real>955</real>
 		</dict>
 		<key>A19C7560-4E10-4266-9C51-ED0FD18756CA</key>
 		<dict>
 			<key>note</key>
 			<string>List projects</string>
 			<key>xpos</key>
-			<integer>410</integer>
+			<real>410</real>
 			<key>ypos</key>
-			<integer>85</integer>
+			<real>85</real>
 		</dict>
 		<key>B0A6E1FF-0297-4C8E-A114-C63A67C41C70</key>
 		<dict>
 			<key>note</key>
 			<string>Get account id</string>
 			<key>xpos</key>
-			<integer>705</integer>
+			<real>705</real>
 			<key>ypos</key>
-			<integer>1435</integer>
+			<real>1435</real>
 		</dict>
 		<key>B5EAFF1F-8776-4F11-AE21-238AC9B91C8D</key>
 		<dict>
 			<key>note</key>
 			<string>Not setup yet or no timers started today</string>
 			<key>xpos</key>
-			<integer>745</integer>
+			<real>745</real>
 			<key>ypos</key>
-			<integer>860</integer>
+			<real>860</real>
 		</dict>
 		<key>BC08FC7F-F5A6-4644-8D5C-84A03EAEFD09</key>
 		<dict>
 			<key>xpos</key>
-			<integer>405</integer>
+			<real>405</real>
 			<key>ypos</key>
-			<integer>1120</integer>
+			<real>1120</real>
 		</dict>
 		<key>C0709F3E-C6AF-4080-A47D-A9CE8A2EB431</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1345</integer>
+			<real>1345</real>
 			<key>ypos</key>
-			<integer>105</integer>
+			<real>105</real>
 		</dict>
 		<key>E8BD4C0F-6FE1-4808-87EC-951DB65A6F0B</key>
 		<dict>
 			<key>note</key>
 			<string>List project tasks</string>
 			<key>xpos</key>
-			<integer>705</integer>
+			<real>705</real>
 			<key>ypos</key>
-			<integer>80</integer>
+			<real>80</real>
 		</dict>
 		<key>F2B31BB7-F4E2-4BFF-9DC8-77F7366DF9EF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1010</integer>
+			<real>1010</real>
 			<key>ypos</key>
-			<integer>1435</integer>
+			<real>1435</real>
 		</dict>
 		<key>FBF5E782-D12B-4359-A4EF-83F6217D9394</key>
 		<dict>
@@ -1550,16 +1483,38 @@ https://github.com/andrejilderda/alfred-harvest-v2</string>
 			<key>note</key>
 			<string>Store token</string>
 			<key>xpos</key>
-			<integer>820</integer>
+			<real>895</real>
 			<key>ypos</key>
-			<integer>1195</integer>
+			<real>1150</real>
 		</dict>
 	</dict>
-	<key>variablesdontexport</key>
-	<array/>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>required</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Please enter your six-digit 'Account ID,' which you can obtain by creating an API token at https://id.getharvest.com/developers.</string>
+			<key>label</key>
+			<string>Harvest Account ID</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>account_id</string>
+		</dict>
+	</array>
 	<key>version</key>
-	<string>1.1.5</string>
+	<string>2.0.0</string>
 	<key>webaddress</key>
-	<string>https://github.com/andrejilderda/alfred-harvest-v2</string>
+	<string>https://github.com/andrejilderda/alfred-harvest</string>
 </dict>
 </plist>
