@@ -1,3 +1,3 @@
-const alfy = require('alfy');
+import alfy from 'alfy';
 
 console.log(alfy.config.get('accountId').trim());

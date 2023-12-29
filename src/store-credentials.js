@@ -1,6 +1,6 @@
-import { notify } from './utils/notifications';
-import { apiCall, execute } from './utils/helpers';
-const alfy = require('alfy');
+import alfy from 'alfy';
+import { notify } from './utils/notifications.js';
+import { apiCall, execute } from './utils/helpers.js';
 
 const token = process.env.token;
 const accountId = process.env.account_id;

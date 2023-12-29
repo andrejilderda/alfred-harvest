@@ -1,7 +1,8 @@
-import { alfredError } from './utils/errors';
-import { apiCall } from './utils/helpers';
-import { getToday, roundTime } from './utils/time';
-const alfy = require('alfy');
+import alfy from 'alfy';
+
+import { alfredError } from './utils/errors.js';
+import { apiCall } from './utils/helpers.js';
+import { getToday, roundTime } from './utils/time.js';
 
 const today = getToday();
 const userId = alfy.config.get('userId') || '';

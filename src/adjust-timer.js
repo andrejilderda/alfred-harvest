@@ -1,5 +1,5 @@
-const alfy = require('alfy');
-import * as time from './utils/time';
+import alfy from 'alfy';
+import * as time from './utils/time.js';
 
 const vars = process.env;
 const { taskId, taskHours, taskName, taskClientName, stopRestart } = vars;

@@ -1,5 +1,5 @@
-import { alfredError } from './utils/errors';
-const alfy = require('alfy');
+import alfy from 'alfy';
+import { alfredError } from './utils/errors.js';
 
 const vars = process.env;
 const { task_assignments } = vars;

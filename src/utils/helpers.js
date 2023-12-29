@@ -1,6 +1,9 @@
-const util = require('util');
-const exec = util.promisify(require('child_process').exec);
-const alfy = require('alfy');
+import alfy from 'alfy';
+import { promisify } from 'util';
+import { exec as execCallback } from 'child_process';
+
+const exec = promisify(execCallback);
+
 
 export const execute = async (command) => {
     const { stdout } = await exec(command);
