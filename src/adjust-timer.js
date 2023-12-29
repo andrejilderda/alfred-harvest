@@ -39,7 +39,7 @@ if (!alfy.input || time.calculate(alfy.input) === undefined) {
             uuid: 'add5min',
             title: 'Add 5 minutes',
             subtitle: `Adjust timer: ${taskHours} → ${time.calculate('+5m', taskHours)}`,
-            autocomplete: '-5m',
+            autocomplete: '+5m',
             valid: false
         },
         {
