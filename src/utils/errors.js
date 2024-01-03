@@ -1,4 +1,4 @@
-const alfy = require('alfy');
+import alfy from 'alfy';
 
 export const alfredError = (error, title) => {
     let errorTitle = title;

@@ -1,7 +1,6 @@
-import { apiCall } from './utils/helpers';
-import { getToday } from './utils/time';
-import { notify } from './utils/notifications';
-const alfy = require('alfy');
+import { apiCall } from './utils/helpers.js';
+import { getToday } from './utils/time.js';
+import { notify } from './utils/notifications.js';
 
 const vars = process.env;
 const { projectId, projectName, taskId, taskName } = vars;

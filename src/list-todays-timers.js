@@ -1,14 +1,15 @@
-import { alfredError } from './utils/errors';
-import { apiCall } from './utils/helpers';
-import { getToday, roundTime } from './utils/time';
-const alfy = require('alfy');
+import alfy from 'alfy';
+
+import { alfredError } from './utils/errors.js';
+import { apiCall } from './utils/helpers.js';
+import { getToday, roundTime } from './utils/time.js';
 
 const today = getToday();
 const userId = alfy.config.get('userId') || '';
 
 const url = `https://api.harvestapp.com/v2/time_entries?user_id=${userId}&from=${today}&to=${today}`;
 
-const action = process.argv[3] || ''; // toggle|note
+const action = process.argv[3] || ''; // toggle|note|adjust
 const actionPrefix = action === 'note' ? 'Add note: ' : '';
 
 await apiCall(url, 'GET')
@@ -51,7 +52,7 @@ await apiCall(url, 'GET')
                 }
 
                 // use alt-key to delete task
-                if (action !== 'note') {
+                if (action === 'toggle') {
                     item.mods.alt = {
                         subtitle: 'Delete this task...',
                         variables: {
@@ -63,8 +64,8 @@ await apiCall(url, 'GET')
                         }
                     };
                 }
-                // except for notes. Replace in stead of appending note
-                else {
+                
+                if (action === 'note') {
                     item.mods.alt = {
                         subtitle: `Overwrite note...`,
                         variables: {

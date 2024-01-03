@@ -1,6 +1,9 @@
-const util = require('util');
-const exec = util.promisify(require('child_process').exec);
-const alfy = require('alfy');
+import alfy from 'alfy';
+import { promisify } from 'util';
+import { exec as execCallback } from 'child_process';
+
+const exec = promisify(execCallback);
+
 
 export const execute = async (command) => {
     const { stdout } = await exec(command);
@@ -16,9 +19,9 @@ export const execute = async (command) => {
  */
 export const apiCall = async (url, method) => {
     // Get the Harvest account id (6 digits) that was stored
-    const accountId = alfy.config.get('accountId');
+    const accountId = process.env.account_id;
 
-    if (!accountId) throw new Error('Missing account id. Have you setup correctly?');
+    if (!accountId) throw new Error("Error: Missing Account ID. Please ensure you have set it up correctly in Alfred's preferences.");
 
     const fetchApi = async (token) => {
         return alfy.fetch(url, {
@@ -31,7 +34,7 @@ export const apiCall = async (url, method) => {
     }
 
     // gets the Harvest API token from Apple's keychain
-    const getToken = async (accountId) => {
+    const getToken = async () => {
         return execute(`security find-generic-password -a 'apitoken' -s 'com.andrejilderda.harvest' -w`);
     }
 

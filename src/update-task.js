@@ -1,5 +1,5 @@
-import { apiCall } from "./utils/helpers";
-import { notify } from "./utils/notifications";
+import { apiCall } from "./utils/helpers.js";
+import { notify } from "./utils/notifications.js";
 
 const vars = process.env;
 const { action, goTo, taskId, taskNotes, requestMethod, taskHours } = vars;

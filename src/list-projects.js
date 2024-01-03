@@ -1,6 +1,6 @@
-import { alfredError } from './utils/errors';
-import { apiCall } from './utils/helpers';
-const alfy = require('alfy');
+import alfy from 'alfy';
+import { alfredError } from './utils/errors.js';
+import { apiCall } from './utils/helpers.js';
 
 const url = 'https://api.harvestapp.com/v2/users/me/project_assignments?';
 
