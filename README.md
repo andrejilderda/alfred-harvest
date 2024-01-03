@@ -1,22 +1,24 @@
-## Control your [Harvest](https://www.getharvest.com/) timers directly from [Alfred](https://www.alfredapp.com/).
+## Control your [Harvest](https://www.getharvest.com/) timers using [Alfred](https://www.alfredapp.com/).
 
 - Start, stop and adjust timers
 - Delete timers
 - Add/append notes
-- API token is stored in keychain (no password used for authenticating)
+- API token is stored securely in Keychain (no password used for authenticating)
 - Uses the latest Harvest API (v2)
 
-## Installation & setup
+## Installation & Setup
 
-Install the latest version which you can find under [Releases](https://github.com/andrejilderda/alfred-harvest/releases).
+1. Ensure that you have [node.js](https://nodejs.org/en/) installed. You can check by running `node -v` in the Terminal.
+2. Download the latest version of the workflow from the [Releases](https://github.com/andrejilderda/alfred-harvest/releases) page.
+3. Open https://id.getharvest.com/developers and click on 'Create New Personal Access Token'.
+4. Give the token a name, such as 'Alfred workflow', and generate it.
+5. Copy the generated Account ID.
+6. Open the workflow's configuration and paste the Account ID. Save the configuration.
+7. Type `hvs` in Alfred and press <kbd>enter</kbd>.
+8. Paste the API token and press <kbd>enter</kbd>.
+9. Type `hvn` in Alfred to start your first timer.
 
-1. Make sure you have [node.js](https://nodejs.org/en/) installed. To check run `node -v` from your terminal.
-2. Go to https://id.getharvest.com/developers › 'Create New Personal Access Token' and give it a name, i.e. 'Alfred workflow'.
-3. Copy the access token and remember your Account ID.
-4. Type `hvs` and press <kbd>enter</kbd>,
-5. Paste the API token and press <kbd>enter</kbd>,
-6. Type your 6-digit Account ID and press <kbd>enter</kbd>,
-7. Type `hvn` and start your first timer!
+Note: Make sure you have the [Alfred Powerpack](https://www.alfredapp.com/powerpack/) installed to use workflows.
 
 \*The first time you run the workflow you may be prompted to grant access to the API token (which is stored in your Keychain).
 
